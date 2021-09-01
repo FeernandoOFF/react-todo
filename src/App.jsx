@@ -60,6 +60,7 @@ function App() {
     temp[index].title = title;
     temp[index].description= description;
     setTodos(temp);
+
   }
   let changeSearchBar = (value) => {
     setSearchBar(value);
@@ -74,11 +75,14 @@ function App() {
     if(todos.length>=1){
       id = todos[todos.length-1].id;
     }
-    id++;
-    console.log(data,mode,id)
-    setShowModal(false);
-    mode=="input"?createTodo(data[0][0],data[1][0],id):null
+    if(mode=="input"){
+      id++;
+      console.log(data,mode,id)
+      createTodo(data[0][0],data[1][0],id)
+      
+    }
     mode=="edit"?editTodo(data[0][0],data[1][0],id):null
+    setShowModal(false);
   };
   let filterTodos = todos.filter((todo) =>
     todo.title.toLocaleLowerCase().includes(searchBar.toLocaleLowerCase()) && !todo.success
