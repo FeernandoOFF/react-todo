@@ -2,8 +2,8 @@
   "name": "react-todo",
   "version": "0.0.0",
   "scripts": {
-    "dev": "npm run watch:css && vite",
-    "build": "vite build",
+    "dev": "npm run watch:css && vite --host",
+    "build": "npm run build:css && vite build",
     "serve": "vite preview",
     "build:css": "postcss src/css/tailwind.css -o src/css/main.css",
     "watch:css": "postcss src/css/tailwind.css -o src/css/main.css"
