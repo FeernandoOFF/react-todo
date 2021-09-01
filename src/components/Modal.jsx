@@ -1,7 +1,8 @@
 import React from "react";
 export function Modal(props) {
 
-  // console.log(props.options)
+  // console.log("Props del modal: ",props)
+
   let response = props.options.inputs.map((input,i) => {
     let temp="";
     !!props.options.defaultValue? temp=props.options.defaultValue[i]: temp =""
@@ -21,7 +22,7 @@ export function Modal(props) {
               : () => console.log("Pls Send a 'closeModal' Event ")
           }>
             <svg
-              className="fill-current text-gray-800 dark:text-white"
+              className="fill-current text-gray-800 dark:text-whi"
               width="18"
               height="18"
               viewBox="0 0 18 18"

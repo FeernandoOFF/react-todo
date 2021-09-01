@@ -9,7 +9,7 @@ export function TodoItem(props){
             <p onClick={()=>{console.log("click");props.onEdit()}} className={todo.success?'line-through text-left w-10/12 px-4 cursor-pointer': 'text-left  w-10/12 px-4 cursor-pointer'}>{todo.title}</p>
             <div className="option flex w-1/4 md:w-1/5 justify-between">
                 <img src="https://image.flaticon.com/icons/png/512/1632/1632602.png" width="25" height="25" alt="delete"onClick={()=>props.deleteTodo(todo)} className="cursor-pointer"></img>
-                <img src="https://image.flaticon.com/icons/png/512/2919/2919592.png" width="25" height="25" alt="edit" onClick={()=>{console.log("click");props.onEdit()}} className="cursor-pointer" ></img>
+                <img src="https://image.flaticon.com/icons/png/512/2919/2919592.png" width="25" height="25" alt="edit" onClick={()=>{props.onEdit()}} className="cursor-pointer" ></img>
             </div>
         </div>
     );
